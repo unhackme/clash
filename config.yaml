@@ -5,7 +5,7 @@ proxies:
     port: 443
     uuid: ca289159-500f-4992-bacc-58b90fec0a59
     tls: true
-    network: http
+    network: xhttp
     http-opts:
       method: GET
       path:
@@ -22,7 +22,7 @@ proxies:
     port: 443
     uuid: ca289159-500f-4992-bacc-58b90fec0a59
     tls: true
-    network: http
+    network: xhttp
     http-opts:
       method: GET
       path:
