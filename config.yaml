@@ -7,12 +7,13 @@ proxies:
     tls: true
     network: wss  # Используем wss для безопасного соединения
     ws-opts:
-      path: "/bb"  # Пример пути, попробуй с "/"
+      path: "/bb"  # Путь, обновлен на "bb"
       headers:
         Host: "sip.sefc.space"  # Маскировка
-      sni: "."  # Пример для использования домена вместо точки
-    allowInsecure: true  # Разрешить небезопасные соединения
-    encryption: none  # Указываем отсутствие дополнительного шифрования (если требуется)
+        User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"  # Строка вместо массива
+      sni: "."  # Использование SNI в виде точки "."
+    allowInsecure: true  # Разрешить небезопасные соединения (обход проверки сертификатов)
+    encryption: none  # Без дополнительного шифрования (если требуется)
     fingerprint: "chrome"  # Использование отпечатка для имитации Chrome (если сервер требует)
 
   - name: "VLESS-WS-2"
@@ -23,12 +24,13 @@ proxies:
     tls: true
     network: wss  # Используем wss для безопасного соединения
     ws-opts:
-      path: "/bb"  # Пример пути, попробуй с "/"
+      path: "/bb"  # Путь, обновлен на "bb"
       headers:
         Host: "sip.sefc.space"  # Маскировка
-      sni: "."  # Пример для использования домена вместо точки
-    allowInsecure: true  # Разрешить небезопасные соединения
-    encryption: none  # Указываем отсутствие дополнительного шифрования (если требуется)
+        User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"  # Строка вместо массива
+      sni: "."  # Использование SNI в виде точки "."
+    allowInsecure: true  # Разрешить небезопасные соединения (обход проверки сертификатов)
+    encryption: none  # Без дополнительного шифрования (если требуется)
     fingerprint: "chrome"  # Использование отпечатка для имитации Chrome (если сервер требует)
 
 proxy-groups:
