@@ -12,6 +12,10 @@ proxies:
         Host: "sip.sefc.space"  # Маскировка
         User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"  # Строка вместо массива
       sni: "."  # Пример для использования домена вместо точки
+    allowInsecure: true  # Разрешить небезопасные соединения
+    encryption: none  # Указываем отсутствие дополнительного шифрования (если требуется)
+    fingerprint: "chrome"  # Использование отпечатка для имитации Chrome (если сервер требует)
+    tcp-keepalive: true  # Разрешаем поддержку стабильных соединений
 
   - name: "VLESS-WS-2"
     type: vless
@@ -26,6 +30,10 @@ proxies:
         Host: "sip.sefc.space"  # Маскировка
         User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"  # Строка вместо массива
       sni: "."  # Пример для использования домена вместо точки
+    allowInsecure: true  # Разрешить небезопасные соединения
+    encryption: none  # Указываем отсутствие дополнительного шифрования (если требуется)
+    fingerprint: "chrome"  # Использование отпечатка для имитации Chrome (если сервер требует)
+    tcp-keepalive: true  # Разрешаем поддержку стабильных соединений
 
 proxy-groups:
   - name: "Auto-Select"
