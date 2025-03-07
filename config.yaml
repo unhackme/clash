@@ -1,0 +1,35 @@
+proxies:
+  - name: "VLESS-XHTTP-1"
+    type: vless
+    server: 104.19.153.1  # Заменить на реальный IP
+    port: 443
+    uuid: ca289159-500f-4992-bacc-58b90fec0a59
+    tls: true
+    network: http
+    http-opts:
+      method: GET
+      path: "/ca289159"
+      headers:
+        Host: biz.gizli.space
+        User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+
+  - name: "VLESS-XHTTP-2"
+    type: vless
+    server: 172.71.173.69  # Заменить на реальный IP
+    port: 443
+    uuid: ca289159-500f-4992-bacc-58b90fec0a59
+    tls: true
+    network: http
+    http-opts:
+      method: GET
+      path: "/ca289159"
+      headers:
+        Host: biz.gizli.space
+        User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+
+proxy-groups:
+  - name: "Auto-Select"
+    type: select
+    proxies:
+      - "VLESS-XHTTP-1"
+      - "VLESS-XHTTP-2"
