@@ -1,41 +1,37 @@
 proxies:
-  - name: "VLESS-XHTTP-1"
+  - name: "VLESS-WS-1"
     type: vless
-    server: 104.19.153.1  # Заменить на реальный IP
+    server: 92.223.76.20  # Первый IP
     port: 443
-    uuid: ca289159-500f-4992-bacc-58b90fec0a59
+    uuid: b20f0323-eb7a-4765-9329-4d2992d49900
     tls: true
-    network: xhttp
-    http-opts:
-      method: GET
-      path:
-        - "/ca289159"  # Это список
+    network: ws
+    ws-opts:
+      path: "/bb"  # Пример пути, замените, если нужно
       headers:
-        Host:
-          - "biz.gizli.space"  # Это список
+        Host: "sip.sefc.space"  # Маскировка
         User-Agent:
-          - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"  # Это список
+          - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+      sni: "."  # Использование точки для SNI
 
-  - name: "VLESS-XHTTP-2"
+  - name: "VLESS-WS-2"
     type: vless
-    server: 172.71.173.69  # Заменить на реальный IP
+    server: 93.123.17.151  # Второй IP
     port: 443
-    uuid: ca289159-500f-4992-bacc-58b90fec0a59
+    uuid: b20f0323-eb7a-4765-9329-4d2992d49900
     tls: true
-    network: xhttp
-    http-opts:
-      method: GET
-      path:
-        - "/ca289159"  # Это список
+    network: ws
+    ws-opts:
+      path: "/bb"  # Пример пути, замените, если нужно
       headers:
-        Host:
-          - "biz.gizli.space"  # Это список
+        Host: "sip.sefc.space"  # Маскировка
         User-Agent:
-          - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"  # Это список
+          - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+      sni: "."  # Использование точки для SNI
 
 proxy-groups:
   - name: "Auto-Select"
     type: select
     proxies:
-      - "VLESS-XHTTP-1"
-      - "VLESS-XHTTP-2"
+      - "VLESS-WS-1"
+      - "VLESS-WS-2"
