@@ -8,10 +8,13 @@ proxies:
     network: http
     http-opts:
       method: GET
-      path: "/ca289159"
+      path:
+        - "/ca289159"  # Это список
       headers:
-        Host: biz.gizli.space
-        User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+        Host:
+          - "biz.gizli.space"  # Это список
+        User-Agent:
+          - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"  # Это список
 
   - name: "VLESS-XHTTP-2"
     type: vless
@@ -22,10 +25,13 @@ proxies:
     network: http
     http-opts:
       method: GET
-      path: "/ca289159"
+      path:
+        - "/ca289159"  # Это список
       headers:
-        Host: biz.gizli.space
-        User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+        Host:
+          - "biz.gizli.space"  # Это список
+        User-Agent:
+          - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"  # Это список
 
 proxy-groups:
   - name: "Auto-Select"
