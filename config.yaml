@@ -5,14 +5,13 @@ proxies:
     port: 443
     uuid: b20f0323-eb7a-4765-9329-4d2992d49900
     tls: true
-    network: ws
+    network: wss  # Используем wss для безопасного соединения
     ws-opts:
-      path: "/bb"  # Пример пути, замените, если нужно
+      path: "/bb"  # Пример пути, попробуй с "/"
       headers:
         Host: "sip.sefc.space"  # Маскировка
-        User-Agent:
-          - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-      sni: "."  # Использование точки для SNI
+        User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"  # Строка вместо массива
+      sni: "."  # Пример для использования домена вместо точки
 
   - name: "VLESS-WS-2"
     type: vless
@@ -20,14 +19,13 @@ proxies:
     port: 443
     uuid: b20f0323-eb7a-4765-9329-4d2992d49900
     tls: true
-    network: ws
+    network: wss  # Используем wss для безопасного соединения
     ws-opts:
-      path: "/bb"  # Пример пути, замените, если нужно
+      path: "/bb"  # Пример пути, попробуй с "/"
       headers:
         Host: "sip.sefc.space"  # Маскировка
-        User-Agent:
-          - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-      sni: "."  # Использование точки для SNI
+        User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"  # Строка вместо массива
+      sni: "."  # Пример для использования домена вместо точки
 
 proxy-groups:
   - name: "Auto-Select"
